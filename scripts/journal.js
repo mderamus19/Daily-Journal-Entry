@@ -1,30 +1,9 @@
-/*
-    define your journal entry objects inside the journal entries array.
-*/
-const journalEntries = [
-  {
-    dateOfEntry: "June 5, 2019",
-    titleOfEntry: "JavaScript Objects",
-    journalNote: "Objects have keys and values",
-    mood: "Happy"
-  },
-
-  {
-    dateOfEntry: "June 5, 2019",
-    titleOfEntry: "Arrays",
-    journalNote: "Arrays hold a list of common items",
-    mood: "Overwhelmed"
-  },
-
-  {
-    dateOfEntry: "June 5, 2019",
-    titleOfEntry: "Manipulating the DOM",
-    journalNote:
-      "Use querySelector or querySelectorAll to retrieve a single or list of components",
-    mood: "frustrated"
-  }
-];
-
+fetch("http://localhost:3000/journalEntries") // Fetch from the API
+    .then(entries => entries.json())  // Parse as JSON
+    .then(parsedEntries => {
+      console.log(parsedEntries)                          // What should happen when we finally have the array?
+    })
+    
 // write a function that builds a journal entry HTML string template. To create, and return, a string template that
 // represents a single journal entry object as HTML 
 
