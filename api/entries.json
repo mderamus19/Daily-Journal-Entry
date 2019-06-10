@@ -1,0 +1,25 @@
+{
+"journalEntries": [
+    {
+      "dateOfEntry": "June 5, 2019",
+      "titleOfEntry": "JavaScript Objects",
+      "journalNote": "Objects have keys and values",
+      "mood": "Happy"
+    },
+  
+    {
+      "dateOfEntry": "June 5, 2019",
+      "titleOfEntry": "Arrays",
+      "journalNote": "Arrays hold a list of common items",
+      "mood": "Overwhelmed"
+    },
+  
+    {
+      "dateOfEntry": "June 5, 2019",
+      "titleOfEntry": "Manipulating the DOM",
+      "journalNote":
+        "Use querySelector or querySelectorAll to retrieve a single or list of components",
+      "mood": "frustrated"
+    }
+  ]
+}
