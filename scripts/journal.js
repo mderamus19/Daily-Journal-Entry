@@ -1,7 +1,7 @@
 fetch("http://localhost:3000/journalEntries") // Fetch from the API
     .then(entries => entries.json())  // Parse as JSON
-    .then(parsedEntries => {
-      console.log(parsedEntries)                          // What should happen when we finally have the array?
+    .then(parsedentries => {
+      console.log(parsedentries)                          // What should happen when we finally have the array?
     })
     
 // write a function that builds a journal entry HTML string template. To create, and return, a string template that
