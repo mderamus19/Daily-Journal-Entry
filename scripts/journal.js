@@ -10,7 +10,40 @@ API.getJournalEntries()
     })
 
 document.querySelector("#save-btn").addEventListener("click", () => {
+let conceptsCovered = document.querySelector("#conceptsCovered").value
+let journalEntry = document.querySelector("#journalEntry").value
+let journalDate = document.querySelector("#journalDate").value
 
+let newEntry = buildJournalEntryObj(conceptsCovered, journalEntry, journalDate)
+addNewJournalEntry(newEntry)
+.then(data => data.json())
+.then (dataJS => {
+  console.log(dataJS.conceptsCovered)
+  entryLog.innerHTML = ""
+  
+})
+
+
+// function formValidationChar () {
+
+//   let letterNumberCharacter = /^[0-9a-zA-Z(){}:;.]+$/;
+
+//   if ((conceptsCoveredInput.value.match(letterNumberCharacter))) {
+//     return true;
+//   } 
+//   else {
+//     alert("Improper characters used");
+//     return false;
+//   }
+// let newLego = buildLegoObj(creatorName, color)
+//   addNewLegoCreation(newLego)
+//   .then( data => data.json())
+//   .then( dataJS => {
+//     console.log(dataJS.color)
+//     legoList.innerHTML = ""
+//     getLegos()
+//   })
+// })
     
 })
 // Invoke the factory function, passing along the form field values
