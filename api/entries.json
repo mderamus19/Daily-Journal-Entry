@@ -26,6 +26,12 @@
       "titleOfEntry": "API, fetch",
       "journalNote": "Learn to POST entries",
       "id": 4
+    },
+    {
+      "dateOfEntry": "2019-06-24",
+      "titleOfEntry": "Form Validation",
+      "journalNote": "Learned how to validate input data",
+      "id": 5
     }
   ]
 }

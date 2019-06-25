@@ -1,6 +1,5 @@
-// In your main JavaScript module (journal.js) add a click event listener to the Record Journal Entry button at the bottom of your form.
-// When the user clicks the button, you need to create a new entry in your API. The HTTP method that you use to create resources is POST.
-// Guidance on syntax is provided below.
+// add a click event listener to the Record Journal Entry button
+// create a new entry in the API 
 
 API.getJournalEntries().then(parsedentries => {
   renderJournalEntries(parsedentries); // parsedentries holds the data received from api
@@ -27,6 +26,7 @@ document.querySelector("#save-btn").addEventListener("click", () => {
       });
     });
 });
+// add new journal entry with POST resource
 function addNewJournalEntry(entry) {
   console.log("Hello");
   return fetch("http://localhost:3000/journalEntries", {
@@ -37,7 +37,7 @@ function addNewJournalEntry(entry) {
     body: JSON.stringify(entry)
   });
 }
-
+// build journal entry object
 function buildJournalEntryObj(conceptsCovered, journalEntry, journalDate) {
   return {
     dateOfEntry: journalDate,
@@ -45,13 +45,17 @@ function buildJournalEntryObj(conceptsCovered, journalEntry, journalDate) {
     journalNote: journalEntry
   };
 }
-
+// form validation
 function checkInput() {
-  if (conceptsCovered.value.trim() !== "" && journalEntry.value.trim() !== "") {
-    alert("Please enter valid response");
-    button.disabled = false;
+  let characters = /^[0-9a-zA-Z(){}:;.]+$/;
+
+  if (
+  (conceptsCovered.value.match(characters)) &&
+    (journalEntry.value.match(characters))
+  ) {
+    return true;
   } else {
-    alert("Click Submit");
-    button.disabled = true;
+    alert("Please use valid characters");
+    return false;
   }
 }
