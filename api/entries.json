@@ -1,25 +1,31 @@
 {
-"journalEntries": [
+  "journalEntries": [
     {
+      "id": 1,
       "dateOfEntry": "June 5, 2019",
       "titleOfEntry": "JavaScript Objects",
       "journalNote": "Objects have keys and values",
       "mood": "Happy"
     },
-  
     {
+      "id": 2,
       "dateOfEntry": "June 5, 2019",
       "titleOfEntry": "Arrays",
       "journalNote": "Arrays hold a list of common items",
       "mood": "Overwhelmed"
     },
-  
     {
+      "id": 3,
       "dateOfEntry": "June 5, 2019",
       "titleOfEntry": "Manipulating the DOM",
-      "journalNote":
-        "Use querySelector or querySelectorAll to retrieve a single or list of components",
+      "journalNote": "Use querySelector or querySelectorAll to retrieve a single or list of components",
       "mood": "frustrated"
+    },
+    {
+      "dateOfEntry": "2019-06-24",
+      "titleOfEntry": "API, fetch",
+      "journalNote": "Learn to POST entries",
+      "id": 4
     }
   ]
 }
